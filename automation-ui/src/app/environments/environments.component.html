@@ -1,0 +1,78 @@
+<router-outlet></router-outlet>
+
+<div class="container">
+    <hr class="separatorLine">
+
+    <div class="row">
+        <div class="col-xl-3" style="padding-top: 5px;">
+            <div class="card">
+                <div class="card-body">
+                    <p-contextMenu [target]="div" [model]="items" appendTo="body" autoZIndex=true (show)="getSelectedHeader()"></p-contextMenu>
+                    <div #div>
+                        <p-tree [value]="files" (onNodeSelect)="nodeSelect($event)" selectionMode="single" [(selection)]="selectedFile"></p-tree>
+
+                    </div>
+
+                    <!-- <div *ngFor="let item of testCollection">
+                    <p-contextMenu [target]="span" [model]="items" appendTo="body" autoZIndex=true></p-contextMenu>
+                    <span #span>
+                        <label  class="capitalize" id={{item.label}} >{{item.label}}</label>
+                    </span>
+                </div> -->
+                </div>
+                <!-- <div (contextmenu)="onRightClick($event)">
+                Right clicked
+                {{nRightClicks}}
+                time(s).
+              </div> -->
+
+            </div>
+        </div>
+
+        <div class="col-xl-9" style="padding-top: 5px;">
+            <div class="card">
+                <div class="card-body">
+                    <canvas id="canvas"> </canvas>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-xl-12" style="padding-top: 5px; padding-bottom: 5px;">
+
+            <div class="card">
+                <p-tabView (onChange)="handleChange($event)" [activeIndex]="selectedIndex">
+                    <p-tabPanel header="Projects">
+                        <div class="card-body">
+
+                        </div>
+                    </p-tabPanel>
+
+                    <p-tabPanel header="Members">
+
+                    </p-tabPanel>
+
+                    <p-tabPanel header="On-Boarding">
+                        <div class="card-body" *ngIf='displayComponent'>
+                            <nextdev-comp-environment></nextdev-comp-environment>
+                        </div>
+                    </p-tabPanel>
+                </p-tabView>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+</div>

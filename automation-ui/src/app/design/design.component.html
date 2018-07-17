@@ -1,0 +1,283 @@
+<router-outlet></router-outlet>
+
+<div class="container">
+  <hr class="separatorLine">
+  <div class="row">
+    <div class="col-xl-3" style="padding-top:15px;">
+          <p-accordion>
+            <p-accordionTab header="ReadyMade Templates">
+              <div *ngFor='let data of templateDataResult'>
+                <label class="images-item" (click)='selectTemplate(data.template_Name)'>
+                  {{data.template_Name}}</label>
+                <br/>
+              </div>
+            </p-accordionTab>
+            <br/>
+
+            <p-accordionTab header="Cont. Integration/Delivery">
+              <div class="card-body max-height">
+                <span *ngFor="let accordionItem of  filterAccordionData('CICD')">
+                  <img class="images-item" (mouseenter)="getImgPolaroid($event)" (mouseout)="clearImgPath($event)" src={{accordionItem.imageSrc}}>
+                </span>
+              </div>
+            </p-accordionTab>
+            <br/>
+            <p-accordionTab header="Source Control Tools">
+              <div class="card-body max-height">
+                <span *ngFor="let accordionItem of  filterAccordionData('SCM')">
+                  <img class="images-item" (mouseenter)="getImgPolaroid($event)" (mouseout)="clearImgPath($event)" src={{accordionItem.imageSrc}}>
+                </span>
+              </div>
+            </p-accordionTab>
+            <br/>
+
+            <p-accordionTab header="Code Quality">
+              <div class="card-body max-height">
+                <span *ngFor="let accordionItem of  filterAccordionData('CodeQuality')">
+                  <img class="images-item" (mouseenter)="getImgPolaroid($event)" (mouseout)="clearImgPath($event)" src={{accordionItem.imageSrc}}>
+                </span>
+              </div>
+            </p-accordionTab>
+            <br/>
+            <p-accordionTab header="Source Management">
+              <div class="card-body max-height">
+                <span *ngFor="let accordionItem of  filterAccordionData('RepoManagement')">
+                  <img class="images-item" (mouseenter)="getImgPolaroid($event)" (mouseout)="clearImgPath($event)" src={{accordionItem.imageSrc}}>
+                </span>
+              </div>
+            </p-accordionTab>
+            <br/>
+
+            <p-accordionTab header="Config Management">
+              <div class="card-body max-height">
+                <span *ngFor="let accordionItem of  filterAccordionData('ConfigManagement')">
+                  <img class="images-item" (mouseenter)="getImgPolaroid($event)" (mouseout)="clearImgPath($event)" src={{accordionItem.imageSrc}}>
+                </span>
+              </div>
+            </p-accordionTab>
+            <br/>
+
+
+
+
+
+            <!-- <p-accordionTab header="Database">
+              <div class="card-body max-height">
+                <span *ngFor="let accordionItem of  filterAccordionData('Database')">
+                  <img class="images-item" (mouseenter)="getImgPolaroid($event)" (mouseout)="clearImgPath($event)" src={{accordionItem.imageSrc}}>
+                </span>
+              </div>
+            </p-accordionTab>
+            <br/> -->
+
+            <!-- <p-accordionTab header="Virtualization">
+              <div class="card-body max-height">
+                <span *ngFor="let accordionItem of  filterAccordionData('Virtualization')">
+                  <img class="images-item" (mouseenter)="getImgPolaroid($event)" (mouseout)="clearImgPath($event)" src={{accordionItem.imageSrc}}>
+                </span>
+              </div>
+            </p-accordionTab>
+            <br/> -->
+
+            <!-- <p-accordionTab header="Monitoring">
+              <div class="card-body max-height">
+                <span *ngFor="let accordionItem of  filterAccordionData('Monitoring')">
+                  <img class="images-item" (mouseenter)="getImgPolaroid($event)" (mouseout)="clearImgPath($event)" src={{accordionItem.imageSrc}}>
+                </span>
+              </div>
+            </p-accordionTab>
+            <br/>
+
+            <p-accordionTab header="Log Management">
+              <div class="card-body max-height">
+                <span *ngFor="let accordionItem of  filterAccordionData('LogManagement')">
+                  <img class="images-item" (mouseenter)="getImgPolaroid($event)" (mouseout)="clearImgPath($event)" src={{accordionItem.imageSrc}}>
+                </span>
+              </div>
+            </p-accordionTab>
+            <br/>
+
+            <p-accordionTab header="Build">
+              <div class="card-body max-height">
+                <span *ngFor="let accordionItem of  filterAccordionData('Build')">
+                  <img class="images-item" (mouseenter)="getImgPolaroid($event)" (mouseout)="clearImgPath($event)" src={{accordionItem.imageSrc}}>
+                </span>
+              </div>
+            </p-accordionTab>
+            <br/>
+
+
+
+            <p-accordionTab header="Testing">
+              <div class="card-body max-height">
+                <span *ngFor="let accordionItem of  filterAccordionData('Testing')">
+                  <img class="images-item" (mouseenter)="getImgPolaroid($event)" (mouseout)="clearImgPath($event)" src={{accordionItem.imageSrc}}>
+                </span>
+              </div>
+            </p-accordionTab>
+            <br/>
+            <p-accordionTab header="Collaboration">
+              <div class="card-body max-height">
+                <span *ngFor="let accordionItem of  filterAccordionData('Collaboration')">
+                  <img class="images-item" (mouseenter)="getImgPolaroid($event)" (mouseout)="clearImgPath($event)" src={{accordionItem.imageSrc}}>
+                </span>
+              </div>
+            </p-accordionTab>
+            <br/>
+
+            <p-accordionTab header="AWS Components">
+              <div class="card-body max-height">
+                <span *ngFor="let accordionItem of  filterAccordionData('AWSComponent')">
+                  <img class="images-item" (mouseenter)="getImgPolaroid($event)" (mouseout)="clearImgPath($event)" src={{accordionItem.imageSrc}}>
+                </span>
+              </div>
+            </p-accordionTab> -->
+            <br/>
+            <br/>
+          </p-accordion>
+    </div>
+
+    <div class="col-xl-9" (dragover)="false" (dragend)="false" (drop)="handleDrop($event)">
+      <div class="row">
+      <p-scrollPanel [style]="{height: '770px'}">
+        <canvas id="canvas"> </canvas>
+
+        <div style="position:absolute; top:45%; left:40%" *ngIf="showSpinner">
+          <p-progressSpinner strokeWidth="5" animationDuration="2s"></p-progressSpinner>
+        </div>
+        <!--Canvas Buttons -->
+
+        <button data-toggle="tooltip"  style="position:absolute; top:5px; left:1035px"  data-placement="bottom"  (click)="removeSelected()"
+        title="Delete element"  type="button"  class="btn btn-danger danger-local">
+          <i class="fa fa-trash"  aria-hidden="true"></i>
+        </button>
+
+        <button data-toggle="tooltip" style="position:absolute; top:5px;left:1080px" data-placement="bottom" (click)="publishDesign($event)"
+          title="Publish" type="button" class="btn btn-primary primary-local">
+          <i class="fa fa-check-square-o" aria-hidden="true"></i>
+        </button>
+
+        <button data-toggle="tooltip"  style="position:absolute; top:5px;  left:1125px"  data-placement="bottom"  (click)="confirmConnector()"
+           title="Connector Mode"  type="button"  class="btn btn-primary primary-local">
+          <i class="fa fa-link"  aria-hidden="true"></i>
+            </button>
+
+            <button data-toggle="tooltip"  style="position:absolute; top:5px;left:1170px"  data-placement="bottom"  (click)="exitConnector()"
+               title="Exit Connector Mode"  type="button"  class="btn btn-primary primary-local">
+              <i class="fa fa-unlink"  aria-hidden="true"></i>
+                </button>
+
+                <button data-toggle="tooltip" style=" position:absolute; top:5px; left:1215px" data-placement="bottom" title="Export to SVG"
+                  type="button" class="btn btn-primary primary-local" (click)="rasterizeSVG();">
+                  <i class="fa fa-download" aria-hidden="true"></i>
+                </button>
+
+                <button data-toggle="tooltip" style="position:absolute; top:5px; left:1260px" data-placement="bottom" title="Save in local Storage"
+                  type="button" class="btn btn-primary primary-local" (click)="saveCanvasToJSON($event);">
+                  <i class="fa fa-save" aria-hidden="true"></i>
+                </button>
+
+                <button data-toggle="tooltip" style="position:absolute; top:5px; left:1305px" data-placement="bottom" title="Load Json" type="button"
+                  class="btn btn-primary primary-local" (click)="loadJsonOnCanvas();">
+                  <i class="fa fa-upload" aria-hidden="true"></i>
+                </button>
+
+                    <button data-toggle="tooltip" style="position:absolute; top:5px; left:1348px" data-placement="bottom" title="Clean Canvas"
+                      type="button" class="btn btn-danger danger-local" (click)="confirmClear();">
+                      <i class="fa fa-ban" aria-hidden="true"></i>
+                    </button>
+
+                    <!--Canvas Buttons -->
+
+                    <div class="images-Canvas-Shape">
+                      <div style="position:absolute; top:5px; left:5px;">
+                        <img class="imagesOnCanvas-item" (dragend)="addFigure('circle');" src="assets/img/Circle.svg">
+                      </div>
+                      <div style="position:absolute; top:5px; left:37px">
+                        <img class="imagesOnCanvas-item" (dragend)="addFigure('square');" src="assets/img/square.svg">
+                      </div>
+                      <div style="position:absolute; top:5px; left:70px">
+                        <img class="imagesOnCanvas-item" (dragend)="addFigure('triangle');" src="assets/img/triangle.svg">
+                      </div>
+                      <div style="position:absolute; top:5px; left:100px">
+                        <img class="imagesOnCanvas-item" (dragend)="addFigure('arrow');" src="assets/img/arrow.svg">
+                      </div>
+                      <div style="position:absolute; top:5px; left:135px;">
+                        <img class="imagesOnCanvas-item" (dragend)="addFigure('doubleArrow');" src="assets/img/doubleArrorw.svg">
+                      </div>
+                      <div style="position:absolute; top:3px; left:170px;">
+                        <img class="imagesOnCanvas-item" (click)="showModalTextBox();" src="assets/img/Text.svg">
+                      </div>
+                      <div class="input-group" id="modalDialog_Text" style="position:absolute; top:0px; left:210px; display: none; ">
+                        <input type="text" style="width:100px" [(ngModel)]="textString">
+
+                        <button id="add-text" data-toggle="tooltip" data-placement="right" title="Add text" (click)="addText()">
+                          <i class="fa fa-plus"></i>
+                        </button>
+                      </div>
+                    </div>
+
+      </p-scrollPanel>
+    </div>
+
+    <div class="row" style="margin-right:0px">
+        <div class="col-xl-12" style="padding-top: 5px; padding-bottom: 5px;padding-left: 0px;padding-right:0px; border-top: 2px solid #333">
+          <div class="card">
+            <p-tabView styleClass="tabStyle">
+              <p-tabPanel header="Json" style="padding-left:5px;padding-right:5px;">
+                <div class="card-body">
+                  <p-scrollPanel *ngIf="!json ==''" [style]="{width: '100%',height: '500px'}">
+                    <pre>{{json}}</pre>
+                  </p-scrollPanel>
+                </div>
+              </p-tabPanel>
+    
+              <p-tabPanel header="Canvas">
+                <div class="card-body">
+                  <div class="custom-item" *ngIf="!props.canvasImage">
+                    <div class="custom-item-title">Background Color</div>
+                    <div class="custom-item-body">
+                      <input type="text" class="form-control" [cpPosition]="'bottom'" [(colorPicker)]="props.canvasFill" [style.background]="props.canvasFill"
+                        [value]="props.canvasFill" (colorPickerChange)="setCanvasFill()">
+                    </div>
+                  </div>
+                  <div class="custom-item">
+                    <div class="custom-item-title">Background Image (url)</div>
+                    <div class="custom-item-body">
+                      <input type="text" readonly class="form-control" placeholder="http://example.jpg" [(ngModel)]="props.canvasImage" (keyup)="setCanvasImage()">
+                    </div>
+                  </div>
+                </div>
+              </p-tabPanel>
+    
+              <p-tabPanel header="Properties">
+                <div class="card-body">
+                  <nextdev-comp-design-properties [selectedItem]="selected" [textEditor]="textEditor" [parentCanvas]="canvas">
+                  </nextdev-comp-design-properties>
+                  <!-- <p>iToolProperties:::{{iToolProperties.iSCMProperties| json}}</p> -->
+                  <div *ngFor="let item of nodePropCollection">
+                    <div>
+                      <label for={{item.key}} class="capitalize" style="width: 100px">{{item.key}}:</label>
+                      <input type="text" class="form-control" id={{item.key}} name={{item.key}} value={{item.value}} [(ngModel)]=item.value (keyup)="updateProperties(nodePropCollection)">
+                    </div>
+                  </div>
+                </div>
+              </p-tabPanel>
+    
+              <p-tabPanel header="Options">
+                <div class="card-body">
+                  <nextdev-comp-design-options [selectedItem]="selected" [parentCanvas]="canvas"></nextdev-comp-design-options>
+                </div>
+              </p-tabPanel>
+            </p-tabView>
+          </div>
+        </div>
+      </div>
+  </div>
+  </div>
+
+
+
+
+
+</div>

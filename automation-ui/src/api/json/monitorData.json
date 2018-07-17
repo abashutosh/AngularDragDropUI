@@ -1,0 +1,96 @@
+{
+    "MonitorData":
+    [
+        {
+            "label": "Environment 1",
+            "data": "Pictures Folder",
+            "expandedIcon": "fa-folder-open",
+            "collapsedIcon": "fa-folder",
+            "children": [{
+                    "label": "Project E1-1",
+                    "data": "Work Folder",
+                    "expandedIcon": "fa-folder-open",
+                    "collapsedIcon": "fa-folder",
+                    "children": [
+                         {"label": "Agile Teams", "icon": "fab fa-slideshare", "data": "Expenses Document"},
+                         {"label": "Users", "icon": "far fa-user", "data": "Resume Document"}
+                        ]
+                },
+                {
+                    "label": "Project E1-2",
+                    "data": "Home Folder",
+                    "expandedIcon": "fa-folder-open",
+                    "collapsedIcon": "fa-folder",
+                    "children": [
+                        {"label": "Agile Teams", "icon": "fab fa-slideshare", "data": "Expenses Document"},
+                         {"label": "Users", "icon": "far fa-user", "data": "Resume Document"}
+                    ]
+                }]
+            
+        },
+        {
+            "label": "Environment 2",
+            "data": "Pictures Folder",
+            "expandedIcon": "fa-folder-open",
+            "collapsedIcon": "fa-folder",
+            "children": [{
+                    "label": "Project E2-1",
+                    "data": "Work Folder",
+                    "expandedIcon": "fa-folder-open",
+                    "collapsedIcon": "fa-folder",
+                    "children": [
+                         {"label": "Agile Teams", "icon": "fab fa-slideshare", "data": "Expenses Document"},
+                         {"label": "Users", "icon": "far fa-user", "data": "Resume Document"}
+                        ]
+                },
+                {
+                    "label": "Project E2-2",
+                    "data": "Home Folder",
+                    "expandedIcon": "fa-folder-open",
+                    "collapsedIcon": "fa-folder",
+                    "children": [
+                        {"label": "Agile Teams", "icon": "fab fa-slideshare", "data": "Expenses Document"},
+                         {"label": "Users", "icon": "far fa-user", "data": "Resume Document"}
+                    ]
+                }]
+        
+        },
+        {
+            "label": "Environment 3",
+            "data": "Pictures Folder",
+            "expandedIcon": "fa-folder-open",
+            "collapsedIcon": "fa-folder",
+            "children": [{
+                    "label": "Project E3-1",
+                    "data": "Work Folder",
+                    "expandedIcon": "fa-folder-open",
+                    "collapsedIcon": "fa-folder",
+                    "children": [
+                         {"label": "Agile Teams", "icon": "fab fa-slideshare", "data": "Expenses Document"},
+                         {"label": "Users", "icon": "far fa-user", "data": "Resume Document"}
+                        ]
+                },
+                {
+                    "label": "Project E3-2",
+                    "data": "Home Folder",
+                    "expandedIcon": "fa-folder-open",
+                    "collapsedIcon": "fa-folder",
+                    "children": [
+                        {"label": "Agile Teams", "icon": "fab fa-slideshare", "data": "Expenses Document"},
+                         {"label": "Users", "icon": "far fa-user", "data": "Resume Document"}
+                    ]
+                },
+                {
+                    "label": "Project E3-3",
+                    "data": "Home Folder",
+                    "expandedIcon": "fa-folder-open",
+                    "collapsedIcon": "fa-folder",
+                    "children": [
+                        {"label": "Agile Teams", "icon": "fab fa-slideshare", "data": "Expenses Document"},
+                         {"label": "Users", "icon": "far fa-user", "data": "Resume Document"}
+                    ]
+                }]
+
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+<div class="top-bar">
+    <div class="top-bar-title">
+        <div class="topnav" style="padding-left: 26%;">
+                <div  class="nexDevLogo">
+                        <img src="/assets/img/abashutosh.PNG" class="image-shape">
+                    </div>
+            <a routerLink="" [ngClass]="{'active': navbarid==='1'}">Design</a>
+            <a routerLink="/environments" [ngClass]="{'active': navbarid==='2'}" >Environments</a>
+            <a routerLink="/monitor" [ngClass]="{'active': navbarid==='3'}" >Monitor</a>
+            <a routerLink="/assess" [ngClass]="{'active': navbarid==='4'}" >Assess</a>
+
+            <div class="search-container">
+                <div class="inner-addon right-addon">
+                    <i class="fa fa-search search-icon-color"></i>
+                    <input type="text" class="form-control" placeholder="Search..." />
+                </div>
+            </div>
+            <div class="notification-container">
+                <nextdev-comp-notification></nextdev-comp-notification>
+            </div>
+            <div class="profile-container">
+                 <nextdev-comp-user-profile></nextdev-comp-user-profile>
+            </div>
+
+        </div>
+    </div>
+</div>

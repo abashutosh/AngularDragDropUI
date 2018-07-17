@@ -1,0 +1,87 @@
+  #canvas {
+    border: 2px dashed #cccccc;
+  }
+  .main-title{
+    margin-top: 10px;
+  }
+  .images-item {
+    /*width: 48%; */
+    cursor: pointer;
+    transition: .5s ease;
+    -webkit-transition: .5s ease;
+    -webkit-transition: .5s ease;
+    padding: 0px;
+    max-width: 120px;
+  }
+
+  .imagesOnCanvas-item {
+    /*width: 48%; */
+    cursor: pointer;
+    transition: .5s ease;
+    -webkit-transition: .5s ease;
+    -webkit-transition: .5s ease;
+    padding: 1px;
+    max-width: 30px;
+  }
+
+  .images-Canvas-Shape{
+    border-style: ridge;
+    position:absolute; 
+    top:2px;
+    width: 210px;
+    height: 40px;
+    background-color: rgba(244, 245, 240, 0.411);
+  }
+
+  .images-item:hover {
+    opacity: 0.7;
+  }
+
+  .ui-accordion .ui-accordion-content {
+    padding: 1px !important;
+  }
+
+  .images-item-upload {
+    width: 80%;
+    cursor: pointer;
+    padding-bottom: 10px;
+    transition: .5s ease;
+    -webkit-transition: .5s ease;
+    -webkit-transition: .5s ease;
+  }
+
+  .images-item-upload:hover {
+    opacity: 0.7;
+  }
+
+  .custom-item {
+    border-bottom: 2px solid #f3f3f3;
+  }
+
+  .custom-item .custom-item-title {
+    color: #666666;
+    font-weight: 600;
+  }
+
+  .custom-item .custom-item-body {
+    padding: 10px 0;
+  }
+
+  .max-height{
+    overflow: auto;
+    max-height: 300px;
+  }
+
+  .separatorLine{
+    margin-top: 7px;
+    margin-bottom: 7px;
+  }
+
+  @media (min-width: 800px) {
+    .container{
+        max-width: 100%;
+    }
+}
+
+
+

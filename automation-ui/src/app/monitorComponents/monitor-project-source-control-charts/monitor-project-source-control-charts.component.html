@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-md-6">
+      <div class="card card-style">
+        <span class="card-title" style="text-align: center; margin-top: 3px;" >
+            <h5>Commits/Team</h5>
+        </span>
+        <p-growl [value]="msgs"></p-growl>
+        <p-chart type="line" [data]="dataCommitsPerteam" (onDataSelect)="selectData($event)"></p-chart>
+      </div>
+  </div>
+  <div class="col-md-6">
+      <div class="card card-style">
+        <span class="card-title header" style="text-align: center;" >
+              <h5>Code Coverage</h5>
+        </span>
+        <p-chart type="bar" [data]="dataCodeCoverage"></p-chart>
+      </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+      <div class="card card-style">
+        <span class="card-title" style="text-align: center; margin-top: 3px;" >
+          <h5>Productivity</h5>
+      </span>
+      <p-chart type="bar" [data]="dataProductivity"></p-chart>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,184 @@
+<div class="container" style="margin-top:50px ">
+  <form [formGroup]="environmentForm" novalidate>
+    <div class="form-group row">
+
+      <div class="col-sm-6">
+          <label for="DevopsEnvironment" class="col-sm-4">Devops Environment</label>
+          <div class="row" class="col-sm-6" class="input-group">
+              <input type="text" name="DevopsEnvironment" id="DevopsEnvironment" placeholder="Search ..." class="form-control" formControlName="DevopsEnvironment">
+
+              <button class="btn btn-primary" type="button" (click)="searchDevOpsEnvironment()"><div class="fa fa-search"></div> Search </button>
+          </div>
+
+      </div>
+      <div class="col-sm-6"></div>
+
+    </div>
+
+    <div class="form-group row">
+      <label for="ProjectName" class="col-sm-12">Project Name</label>
+      <div class="col-sm-6">
+          <input type="text" id="ProjectName" name="ProjectName"  class="form-control" formControlName="ProjectName" >
+      </div>
+      <div class="col-sm-6">
+          <!-- <div class="error" *ngIf="!environmentForm.controls['ProjectName'].valid && (environmentForm.controls['ProjectName'].dirty || submitted)">
+              <div *ngIf="environmentForm.controls['ProjectName'].hasError('required')">
+                  Name is required
+              </div>
+              <div *ngIf="environmentForm.controls['ProjectName'].hasError('minlength')">
+                 Min. 3 charaters
+              </div>
+              <div *ngIf="environmentForm.controls['ProjectName'].hasError('maxlength')">
+                  Must not exceed 30 charaters
+              </div>
+          </div> -->
+      </div>
+
+  </div>
+
+  <div class="form-group row">
+    <label for="ProjectId" class="col-sm-12">Project Id</label>
+    <div class="col-sm-6">
+        <input type="text" id="ProjectId" name="ProjectId"  class="form-control" formControlName="ProjectId" >
+    </div>
+    <div class="col-sm-6"></div>
+  </div>
+
+  <div class="form-group row">
+    <label for="ProjectOwner" class="col-sm-12">Project Owner</label>
+    <div class="col-sm-6">
+        <!-- <input type="text" id="ProjectOwner" name="ProjectOwner"  class="form-control" formControlName="ProjectOwner" > -->
+        <select class="form-control" formControlName="ProjectOwner" >
+            <option  value="Select"> Select </option>
+          <option *ngFor="let data of environmentProjectOwnerDataResult" value={{data.name}}>
+              {{data.name}}
+          </option>
+      </select>
+    </div>
+    <div class="col-sm-6"></div>
+  </div>
+
+  <h3>  Project Team
+
+     <button class="btn btn-success btn-circle pull-right"
+             title="Add Project Team" data-toggle="modal" data-target="#projectTeam">
+       <i class="fa fa-plus"></i>
+     </button>
+   </h3>
+
+      <table class="table table-hover table-bordered">
+        <thead>
+          <tr>
+            <th> Name </th>
+            <th> Email </th>
+            <th> Role </th>
+            <th> Status </th>
+            <th> Action </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of environmentTeamDetailDataResult">
+            <td>{{data.name}}</td>
+            <td>{{data.email}}</td>
+            <td> {{data.role}}</td>
+            <td> {{data.status}}</td>
+            <td> Add </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- <div class="form-group row">
+          <label for="MainTechinology" class="col-sm-12">Main Technology</label>
+          <div class="col-sm-6">
+            <select  class="form-control" formControlName="MainTechinology">
+                <option value="Select"> Select </option>
+              <option *ngFor="let data of environmentMainTechnologyDataResult" value={{data.name}}>
+                  {{data.name}}
+              </option>
+          </select>
+
+          </div>
+          <div class="col-sm-6"></div>
+        </div>
+
+        <div class="form-group row">
+          <label for="Buildtools" class="col-sm-12">Build Tools</label>
+          <div class="col-sm-6">
+              <select class="form-control" formControlName="Buildtools">
+                  <option value="Select"> Select </option>
+                  <option *ngFor="let data of environmentBuildToolDataResult" value={{data.name}}>
+                      {{data.name}}
+                  </option>
+              </select>
+
+          </div>
+          <div class="col-sm-6"></div>
+        </div> -->
+
+  <div class="form-group row">
+    <div class="col-sm-12">
+       <input type="submit"  class="btn btn-success"  value="Save" (click)="SubmitOnBoardingProjectFormData()" />
+       <input type="submit"  class="btn btn-info"  value="Clear" (click)="clear()" />
+       <input type="button"  class="btn btn-warning"  value="Cancel" (click)="cancel()">
+    </div>
+  </div>
+
+
+  </form>
+  </div>
+<!-- Modal -->
+<div  class="container">
+  <div class="modal fade" id="projectTeam" tabindex="-1" role="dialog" aria-labelledby="projectTeamLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="projectTeamLabel"> Project Team </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="ProjectTeamForm" novildate>
+
+            <div class="form-group row">
+              <label for="ProjectId" class="col-sm-12">Name</label>
+              <div class="col-sm-6">
+                  <input type="text" id="Name" name="Name"  class="form-control" formControlName="Name" >
+              </div>
+              <div class="col-sm-6"></div>
+            </div>
+            <div class="form-group row">
+              <label for="ProjectId" class="col-sm-12">Email</label>
+              <div class="col-sm-6">
+                  <input type="text" id="Email" name="Email"  class="form-control" formControlName="Email" >
+              </div>
+              <div class="col-sm-6"></div>
+            </div>
+            <div class="form-group row">
+              <label for="ProjectId" class="col-sm-12">Role</label>
+              <div class="col-sm-6">
+                  <input type="text" id="Role" name="Role"  class="form-control" formControlName="Role" >
+              </div>
+              <div class="col-sm-6"></div>
+            </div>
+
+            <div class="form-group row">
+                <label for="ProjectOwner" class="col-sm-12">Status</label>
+                <div class="col-sm-6">
+                    <select class="form-control" formControlName="Status" >
+                        <option  value="Select" selected > Select </option>
+                        <option  value="Active"> Active</option>
+                        <option  value="Inactive"> Inactive</option>
+                     </select>
+                </div>
+                <div class="col-sm-6"></div>
+              </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)= 'SubmitTeamProject()' data-dismiss="modal" >Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>

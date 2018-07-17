@@ -1,0 +1,45 @@
+<div class="btn-group" role="group" aria-label="...">
+    <!-- <button data-toggle="tooltip" data-placement="bottom" title="Delete element" type="button" class="btn btn-outline-danger" [disabled]="!selectedItem"
+        (click)="removeSelected()">
+        <i class="fa fa-trash" aria-hidden="true"></i>
+    </button> -->
+    <button data-toggle="tooltip" data-placement="bottom" title="Send to back" type="button" class="btn btn-outline-primary" [disabled]="!selectedItem"
+        (click)="sendToBack();">
+        <i class="fa fa-level-down" aria-hidden="true"></i>
+    </button>
+    <button data-toggle="tooltip" data-placement="bottom" title="Send to front" type="button" class="btn btn-outline-primary" [disabled]="!selectedItem"
+        (click)="bringToFront();">
+        <i class="fa fa-level-up" aria-hidden="true"></i>
+    </button>
+    <button data-toggle="tooltip" data-placement="bottom" title="Clone" type="button" class="btn btn-outline-primary"  [disabled]="!selectedItem"
+        (click)="clone();">
+        <i class="fa fa-clone" aria-hidden="true"></i>
+    </button>
+    <button data-toggle="tooltip" data-placement="bottom" title="Unselect" type="button" class="btn btn-outline-primary" [disabled]="!selectedItem"
+        (click)="cleanSelect()">
+        <i class="fa fa-remove" aria-hidden="true"></i>
+    </button>
+</div>
+
+<!-- <div class="btn-group" role="group" aria-label="...">
+        <button data-toggle="tooltip" data-placement="bottom" title="Delete element" type="button" class="btn btn-outline-danger" [disabled]="!selected"
+            (click)="removeSelected();">
+            <i class="fa fa-trash" aria-hidden="true"></i>
+        </button>
+        <button data-toggle="tooltip" data-placement="bottom" title="Send to back" type="button" class="btn btn-outline-primary" [disabled]="!selected"
+            (click)="sendToBack();">
+            <i class="fa fa-level-down" aria-hidden="true"></i>
+        </button>
+        <button data-toggle="tooltip" data-placement="bottom" title="Send to front" type="button" class="btn btn-outline-primary" [disabled]="!selected"
+            (click)="bringToFront();">
+            <i class="fa fa-level-up" aria-hidden="true"></i>
+        </button>
+        <button data-toggle="tooltip" data-placement="bottom" title="Clone" type="button" class="btn btn-outline-primary" [disabled]="!selected || selected.type == 'group'"
+            (click)="clone();">
+            <i class="fa fa-clone" aria-hidden="true"></i>
+        </button>
+        <button data-toggle="tooltip" data-placement="bottom" title="Unselect" type="button" class="btn btn-outline-primary" [disabled]="!selected"
+            (click)="cleanSelect()">
+            <i class="fa fa-remove" aria-hidden="true"></i>
+        </button>
+    </div> -->

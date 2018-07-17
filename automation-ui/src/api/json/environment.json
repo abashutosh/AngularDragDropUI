@@ -1,0 +1,55 @@
+ {
+   "ProjectTeam": [
+     {
+       "name": "John",
+       "email": "John@abc.com",
+       "role": "manager",
+       "status": "active"
+     },
+     {
+       "name": "olive",
+       "email": "olive@abc.com",
+       "role": "lead",
+       "status": "active"
+     },
+     {
+       "name": "max",
+       "email": "max@gmail.com",
+       "role": "developer",
+       "status": "active"
+     }
+   ],
+   "ProjectOwner": [
+     {
+       "name": "Alex "
+     },
+     {
+       "name": "ABD"
+     },
+     {
+       "name": "JP"
+     }
+   ],
+   "MainTechnology": [
+     {
+       "name": "Java"
+     },
+     {
+       "name": ".Net"
+     },
+     {
+       "name": "Python"
+     }
+   ],
+   "BuildTool": [
+     {
+       "name": "Maven"
+     },
+     {
+       "name": "Grunt"
+     },
+     {
+       "name": "Yeoman"
+     }
+   ]
+ }

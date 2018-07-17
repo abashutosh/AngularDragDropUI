@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-md-6">
+      <div class="card card-style">
+        <span class="card-title">
+              <h5>Build Health</h5>
+        </span>
+        <p-chart type="bar" [data]="dataCodeCoverage"></p-chart>
+      </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card card-style">
+      <span class="card-title" >
+        <h5>Code Coverage</h5>
+      </span>
+      <p-chart type="bar" [data]="buildHealth"></p-chart>
+      </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <div class="card card-style">
+      <span class="card-title" >
+          <h5>Security Vulnerability Report</h5>
+      </span>
+      <p-growl [value]="msgs"></p-growl>
+      <p-chart type="line" [data]="vulnerabilityReport" (onDataSelect)="selectData($event)"></p-chart>
+    </div>
+</div>
+  <div class="col-md-6">
+    <div class="card card-style">
+      <span class="card-title" >
+        <h5>Test Report</h5>
+    </span>
+    <p-chart type="bar" [data]="buildHealth"></p-chart>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,36 @@
+{
+    "EnvironmentData":
+    [
+        {
+            "label": "Environment 1",
+            "data": "Pictures Folder",
+            "expandedIcon": "fa-folder-open",
+            "collapsedIcon": "fa-folder",
+            "children": [
+                {"label": "Project E1-1", "icon": "fa-file-image-o", "data": "Barcelona Photo"},
+                {"label": "Project E1-2", "icon": "fa-file-image-o", "data": "PrimeFaces Logo"}]
+            
+        },
+        {
+            "label": "Environment 2",
+            "data": "Pictures Folder",
+            "expandedIcon": "fa-folder-open",
+            "collapsedIcon": "fa-folder",
+            "children": [
+                {"label": "Project E2-1", "icon": "fa-file-image-o", "data": "Barcelona Photo"},
+                {"label": "Project E2-2", "icon": "fa-file-image-o", "data": "PrimeFaces Logo"}]
+        
+        },
+        {
+            "label": "Environment 3",
+            "data": "Environment Folder",
+            "expandedIcon": "fa-folder-open",
+            "collapsedIcon": "fa-folder"
+            ,
+            "children": [
+                {"label": "Project E3-1", "icon": "fa-file-image-o", "data": "Barcelona Photo"},
+                {"label": "Project E3-2", "icon": "fa-file-image-o", "data": "Barcelona Photo"},
+                {"label": "Project E3-3", "icon": "fa-file-image-o", "data": "Barcelona Photo"}]
+        }
+    ]
+}

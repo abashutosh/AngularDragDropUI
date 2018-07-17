@@ -1,0 +1,116 @@
+{
+  "EnvironmentTemplateData": [{
+      "id": "1",
+      "template_Name": "Environment 1",
+      "tools_installed": [{
+          "name": "Jenkins",
+          "type": "CICD",
+          "version": "1.0",
+          "left":97.25,
+          "top": 115.5,
+          "ExtraProps": null
+        },
+        {
+          "name": "Junit",
+          "type": "Testing",
+          "version": "1.0",
+          "left": 331.25,
+          "top": 155.25,
+          "ExtraProps": null
+        },
+        {
+          "name": "Nagios",
+          "type": "Monitoring",
+          "version": "1.0",
+          "left": 571.25,
+          "top": 120.25,
+          "ExtraProps": [{
+            "id": 0,
+            "name": "",
+            "node": "",
+            "ipAddress": ""
+          }]
+        },
+        {
+          "name": "Sonar",
+          "type": "CodeQuality",
+          "version": "1.0",
+          "left": 880.25,
+          "top": 117.25,
+          "ExtraProps": null
+        },
+        {
+          "name": "Nexus",
+          "type": "RepoManagement",
+          "version": "1.0",
+          "left":555.25,
+          "top": 366.75,
+          "ExtraProps": null
+        },
+        {
+          "name": "Maven",
+          "type": "Build",
+          "version": "1.0",
+          "left": 332.25,
+          "top":369.5,
+          "ExtraProps": null
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "template_Name": "Environment 2",
+      "tools_installed": [{
+          "name": "Bamboo",
+          "type": "CICD",
+          "version": "1.0",
+          "left": 200,
+          "top": 300
+        },
+        {
+          "name": "Azure",
+          "type": "Virtualization",
+          "version": "1.0",
+          "left": 700,
+          "top": 220
+        }
+      ]
+    }
+    ,
+    {
+      "id": "3",
+      "template_Name": "Environment 3",
+      "tools_installed": [{
+          "name": "Bamboo",
+          "type": "CICD",
+          "version": "1.0",
+          "left": 200,
+          "top": 160
+        },
+        {
+          "name": "Azure",
+          "type": "Virtualization",
+          "version": "1.0",
+          "left": 500,
+          "top": 180
+        },
+        {
+          "name": "Sonar",
+          "type": "CodeQuality",
+          "version": "1.0",
+          "left": 880.25,
+          "top": 187.25,
+          "ExtraProps": null
+        },
+        {
+          "name": "Nexus",
+          "type": "RepoManagement",
+          "version": "1.0",
+          "left":555.25,
+          "top": 396.75,
+          "ExtraProps": null
+        }
+      ]
+    }
+  ]
+}

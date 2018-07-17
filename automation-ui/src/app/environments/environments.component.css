@@ -1,0 +1,59 @@
+#canvas {
+    border: 2px dashed #cccccc;
+  }
+  .main-title{
+    margin-top: 10px;
+  }
+  .images-item {
+    /*width: 48%; */
+    cursor: pointer;
+    transition: .5s ease;
+    -webkit-transition: .5s ease;
+    -webkit-transition: .5s ease;
+    padding: 0px;
+    max-width: 1530px;
+    min-width: 1050px;
+    min-height: 780px;
+  }
+
+  .imagesOnCanvas-item {
+    /*width: 48%; */
+    cursor: pointer;
+    transition: .5s ease;
+    -webkit-transition: .5s ease;
+    -webkit-transition: .5s ease;
+    padding: 1px;
+    max-width: 30px;
+  }
+
+  .images-Canvas-Shape{
+    border-style: ridge;
+    position:absolute; 
+    top:2px;
+    width: 210px;
+    height: 40px;
+    background-color: rgba(244, 245, 240, 0.411);
+  }
+
+  .card{
+    height: 100%;
+  }
+
+  .ui-tree-container{
+    height: 500px;
+}
+
+.ui-widget-content{
+  border-top-width: 0px !important;
+}
+
+
+
+  @media (min-width: 800px) {
+    .container{
+        max-width: 100%;
+    }
+}
+
+
+

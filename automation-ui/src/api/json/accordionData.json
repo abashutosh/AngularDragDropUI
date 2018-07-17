@@ -1,0 +1,329 @@
+{
+  "AccordionData": [
+
+    {
+      "id":"" ,
+      "name":"ApiGateWayAccount",
+      "type":"AWSComponent",
+      "version":"1.0",
+      "imageSrc":"assets/img/apigateway-account.svg"
+    },
+    {
+      "id":"" ,
+      "name":"AppAutoScalingTarget",
+      "type":"AWSComponent",
+      "version":"1.0",
+      "imageSrc":"assets/img/applicationautoscaling-scalabletarget.svg"
+    },
+    {
+      "id":"" ,
+      "name":"AppAutoScalingPolicy",
+      "type":"AWSComponent",
+      "version":"1.0",
+      "imageSrc":"assets/img/applicationautoscaling-scalingpolicy.svg"
+    },
+    {
+      "id":"" ,
+      "name":"AppAutoScalingLaunchConfig",
+      "type":"AWSComponent",
+      "version":"1.0",
+      "imageSrc":"assets/img/autoscaling-launchconfiguration.svg"
+    },
+    {
+      "id":"" ,
+      "name":"AppCodeDeploy",
+      "type":"AWSComponent",
+      "version":"1.0",
+      "imageSrc":"assets/img/codedeploy-application.svg"
+    },
+    {
+      "id":"" ,
+      "name":"EC2Instance",
+      "type":"AWSComponent",
+      "version":"1.0",
+      "imageSrc":"assets/img/ec2-instance.svg"
+    },
+    {
+      "id":"" ,
+      "name":"EC2InternetGateway",
+      "type":"AWSComponent",
+      "version":"1.0",
+      "imageSrc":"assets/img/ec2-internetgateway.svg"
+    },
+    {
+      "id":"" ,
+      "name":"EC2NatGateway",
+      "type":"AWSComponent",
+      "version":"1.0",
+      "imageSrc":"assets/img/ec2-natgateway.svg"
+    },
+    {
+      "id":"" ,
+      "name":"EC2NetworkAc1",
+      "type":"AWSComponent",
+      "version":"1.0",
+      "imageSrc":"assets/img/ec2-networkacl.svg"
+    },
+    {
+      "id":"" ,
+      "name":"EC2Route",
+      "type":"AWSComponent",
+      "version":"1.0",
+      "imageSrc":"assets/img/ec2-route.svg"
+    },
+    {
+      "id":"" ,
+      "name":"EC2VPC",
+      "type":"AWSComponent",
+      "version":"1.0",
+      "imageSrc":"assets/img/ec2-vpc.svg"
+    },
+    {
+      "id":"" ,
+      "name":"ECService",
+      "type":"AWSComponent",
+      "version":"1.0",
+      "imageSrc":"assets/img/ecs-service.svg"
+    },
+    {
+      "id":"" ,
+      "name":"ECCacheCluster",
+      "type":"AWSComponent",
+      "version":"1.0",
+      "imageSrc":"assets/img/elasticache-cachecluster.svg"
+    },
+    {
+      "id":"" ,
+      "name":"EC2NatGateway",
+      "type":"AWSComponent",
+      "version":"1.0",
+      "imageSrc":"assets/img/ec2-natgateway.svg"
+    },
+    {
+      "id":"" ,
+      "name":"Jenkins",
+      "type":"CICD",
+      "version":"1.0",
+      "imageSrc":"assets/img/jenkins.svg"
+    },
+    {
+      "id":"" ,
+      "name":"Bamboo",
+      "type":"CICD",
+      "version":"1.0",
+      "imageSrc":"assets/img/bamboo.svg"
+    },
+    {
+      "id":"" ,
+      "name":"Ansible",
+      "type":"ConfigManagement",
+      "version":"1.0",
+      "imageSrc":"assets/img/ansible.svg"
+    },
+    {
+      "id":"" ,
+      "name":"Chef",
+      "type":"ConfigManagement",
+      "version":"1.0",
+      "imageSrc":"assets/img/chef.svg"
+    },
+    {
+      "id":"" ,
+      "name":"Puppet",
+      "type":"ConfigManagement",
+      "version":"1.0",
+      "imageSrc":"assets/img/puppet.svg"
+    },
+    {
+      "id":"" ,
+      "name":"Sonar",
+      "type":"CodeQuality",
+      "version":"1.0",
+      "imageSrc":"assets/img/sonar.svg"
+    },
+    {
+      "id":"" ,
+      "name":"Artifactory",
+      "type":"RepoManagement",
+      "version":"1.0",
+      "imageSrc":"assets/img/artifactory.svg"
+    },
+    {
+      "id":"" ,
+      "name":"Nexus",
+      "type":"RepoManagement",
+      "version":"1.0",
+      "imageSrc":"assets/img/nexus.svg"
+    },
+    {
+      "id":"" ,
+      "name":"Flyway",
+      "type":"Database",
+      "version":"1.0",
+      "imageSrc":"assets/img/flyway.svg"
+    },
+    {
+      "id":"" ,
+      "name":"Liquibase",
+      "type":"Database",
+      "version":"1.0",
+      "imageSrc":"assets/img/liquibase.svg"
+    },
+    {
+      "id":"" ,
+      "name":"Opennebula",
+      "type":"Virtualization",
+      "version":"1.0",
+      "imageSrc":"assets/img/opennebula.svg"
+    },
+    {
+      "id":"" ,
+      "name":"Aws",
+      "type":"Virtualization",
+      "version":"1.0",
+      "imageSrc":"assets/img/aws.svg"
+    },
+    {
+      "id":"" ,
+      "name":"Azure",
+      "type":"Virtualization",
+      "version":"1.0",
+      "imageSrc":"assets/img/azure.svg"
+    },
+    {
+      "id":"" ,
+      "name":"Openstack",
+      "type":"Virtualization",
+      "version":"1.0",
+      "imageSrc":"assets/img/openstack.svg"
+    }
+    ,
+    {
+      "id":"" ,
+      "name":"Icinga",
+      "type":"Monitoring",
+      "version":"1.0",
+      "imageSrc":"assets/img/icinga.svg"
+    },
+    {
+      "id":"" ,
+      "name":"Nagios",
+      "type":"Monitoring",
+      "version":"1.0",
+      "imageSrc":"assets/img/nagios.svg"
+    },
+    {
+      "id":"" ,
+      "name":"Graylog",
+      "type":"LogManagement",
+      "version":"1.0",
+      "imageSrc":"assets/img/graylog.svg"
+    },
+    {
+      "id":"" ,
+      "name":"Splunk",
+      "type":"LogManagement",
+      "version":"1.0",
+      "imageSrc":"assets/img/splunk.svg"
+    },
+    {
+      "id":"" ,
+      "name":"Gradle",
+      "type":"Build",
+      "version":"1.0",
+      "imageSrc":"assets/img/gradle.svg"
+    },
+    {
+      "id":"" ,
+      "name":"Maven",
+      "type":"Build",
+      "version":"1.0",
+      "imageSrc":"assets/img/maven.svg"
+    },
+    {
+      "id":"" ,
+      "name":"Grunt",
+      "type":"Build",
+      "version":"1.0",
+      "imageSrc":"assets/img/grunt.svg"
+    },
+    {
+      "id":"" ,
+      "name":"Yeoman",
+      "type":"Build",
+      "version":"1.0",
+      "imageSrc":"assets/img/yeoman.svg"
+    },
+    {
+      "id":"" ,
+      "name":"Git",
+      "type":"SCM",
+      "version":"1.0",
+      "imageSrc":"assets/img/git.svg"
+    },
+    {
+      "id":"" ,
+      "name":"Bitbucket",
+      "type":"SCM",
+      "version":"1.0",
+      "imageSrc":"assets/img/bitbucket.svg"
+    },
+    {
+      "id":"" ,
+      "name":"Github",
+      "type":"SCM",
+      "version":"1.0",
+      "imageSrc":"assets/img/github.svg"
+    },
+    {
+      "id":"" ,
+      "name":"Junit",
+      "type":"Testing",
+      "version":"1.0",
+      "imageSrc":"assets/img/junit.svg"
+    },
+    {
+      "id":"" ,
+      "name":"Testng",
+      "type":"Testing",
+      "version":"1.0",
+      "imageSrc":"assets/img/testng.svg"
+    },
+    {
+      "id":"" ,
+      "name":"Jasmine",
+      "type":"Testing",
+      "version":"1.0",
+      "imageSrc":"assets/img/jasmine.svg"
+    },
+    {
+      "id":"" ,
+      "name":"Selenium",
+      "type":"Testing",
+      "version":"1.0",
+      "imageSrc":"assets/img/selenium.svg"
+    },
+    {
+      "id":"" ,
+      "name":"Jmeter",
+      "type":"Testing",
+      "version":"1.0",
+      "imageSrc":"assets/img/jmeter.svg"
+    },
+    {
+      "id":"" ,
+      "name":"Confluence",
+      "type":"Collaboration",
+      "version":"1.0",
+      "imageSrc":"assets/img/confluence.svg"
+    },
+    {
+      "id":"" ,
+      "name":"Jira",
+      "type":"Collaboration",
+      "version":"1.0",
+      "imageSrc":"assets/img/jira.svg"
+    }
+
+  ]
+}
