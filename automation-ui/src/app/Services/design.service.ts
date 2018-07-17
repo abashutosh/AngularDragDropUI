@@ -11,7 +11,7 @@ export class DesignService {
 
   publish(jsonData: JSON) {
     // ToDo: To call actual server URL by uncommenting below code.
-    return this.http.post('http://192.168.139.77/ansible/', jsonData);
-    // return Observable.of(true);
+    //return this.http.post('http://173.127.29.84/ansible/', jsonData);
+     return Observable.of(true);
   }
 }
